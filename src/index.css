@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #08090D;
+    --bg-surface: #0D0F14;
+    --bg-card: #12151C;
+    --bg-card-hover: #181D26;
+    --border-dim: #232734;
+    --border-accent: #A80D18;
+    --presence-accent: #F8FAFC;
+    --presence-glow: rgba(248, 250, 252, 0.12);
+  }
+
+  body {
+    background-color: #08090D;
+    color: #E2E8F0;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(168, 13, 24, 0.07) 0%, transparent 55%),
+      radial-gradient(circle at 100% 100%, rgba(13, 15, 20, 0.9) 0%, transparent 60%),
+      radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
+    background-size: 100% 100%, 100% 100%, 28px 28px;
+  }
+
+  /* Physical Dossier Paper Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090D;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232734;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A80D18;
+  }
+}
+
+/* Specific Font Families */
+.font-dossier {
+  font-family: 'Special Elite', 'Courier Prime', monospace;
+}
+
+.font-title-paranormal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-annotation {
+  font-family: 'Caveat', cursive;
+}
+
+.font-archive-mono {
+  font-family: 'Courier Prime', 'Space Grotesk', monospace;
+}
+
+/* Physical Document Classes */
+.dossier-paper-light {
+  background-color: #F1EFE7;
+  color: #111318;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.04);
+}
+
+.dossier-paper-dark {
+  background-color: #10131A;
+  color: #E2E8F0;
+  border: 1px solid #232836;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+}
+
+.dossier-postit {
+  background-color: #FEF9C3;
+  color: #1C1917;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.35);
+  transform: rotate(-1deg);
+}
+
+/* Investigation File Stamps */
+.stamp-confidential {
+  border: 2px solid #DC2626;
+  color: #DC2626;
+  font-family: 'Special Elite', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transform: rotate(-3deg);
+  padding: 2px 8px;
+  display: inline-block;
+  user-select: none;
+  opacity: 0.9;
+  text-shadow: 0 0 1px rgba(220, 38, 38, 0.4);
+}
+
+.stamp-classified {
+  border: 2px solid #94A3B8;
+  color: #94A3B8;
+  font-family: 'Special Elite', monospace;
+  letter-spacing: 0.15em;
+  transform: rotate(2deg);
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+/* Tape and Paperclip Visuals */
+.tape-strip {
+  background: rgba(254, 243, 199, 0.25);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Redacted Classified Text */
+.redacted-secret {
+  background-color: #0F172A;
+  color: #475569;
+  letter-spacing: 0.25em;
+  user-select: none;
+  font-family: monospace;
+  border-radius: 2px;
+  padding: 0 4px;
+}
+
+/* Analog Horror Glitch Animation */
+@keyframes paranormal-distortion {
+  0%, 100% { transform: translate(0, 0); opacity: 1; }
+  94% { transform: translate(0, 0); opacity: 1; }
+  95% { transform: translate(-1.5px, 0.5px); opacity: 0.92; filter: hue-rotate(20deg); }
+  96% { transform: translate(1px, -1px); opacity: 0.96; }
+  97% { transform: translate(0, 0); opacity: 1; filter: none; }
+}
+
+.paranormal-glitch {
+  animation: paranormal-distortion 8s infinite;
+}
+
+/* Theme Anomalies */
+.theme-caos {
+  animation: paranormal-distortion 5s infinite;
+  filter: contrast(1.1) brightness(0.95);
+}
+
+.theme-salvador {
+  filter: grayscale(0.2) contrast(1.15);
+  background-color: #171A22 !important;
+}
+
+.theme-convergencia {
+  box-shadow: inset 0 0 90px rgba(168, 13, 24, 0.16);
+}
+
+.theme-alan {
+  filter: hue-rotate(25deg) contrast(1.08);
+}

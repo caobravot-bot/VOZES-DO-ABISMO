@@ -1,0 +1,8 @@
+{
+  "name": "Remix Mistério da Ilha RPG",
+  "description": "Aplicação web completa para gerenciamento de fichas, campanhas e sessões do RPG de investigação e paranormalidade Mistério da Ilha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
